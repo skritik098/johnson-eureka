@@ -1,13 +1,13 @@
-<assembly xmlns-"http://maven.apache.org/ASSEMBLY/2.0.0"
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schenalocation="http://aven. apache.org/ASSEMBLY/2.0.0 http://maven. apache.org/xsd/assembly-2.0.0.xsd">
+        xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
         <id>bundle/1d> 
         <formats>
             <format>tar</format>
         </formats>
         <includeBaseDirectory>false</includeBaseDirectory>
-        <filesets>
-            <fileset>
+        <fileSets>
+            <fileSet>
                 <directoryMode>0755</directoryMode>
                 <fileMode>0744</fileMode>
                 <directory>src/main/resources</directory>
@@ -15,8 +15,8 @@
                 <includes>
                     <include>*.*</include>
                 </includes>
-            </fileset>
-            <fileset>
+            </fileSet>
+            <fileSet>
                 <directoryMode>0755</directoryMode>
                 <fileMode>0744</fileMode>
                 <lineEnding>unix</lineEnding>
@@ -25,8 +25,8 @@
                 <includes>
                     <include>*.*</include>
                 </includes>
-            </fileset>
-            <fileset>
+            </fileSet>
+            <fileSet>
                 <directoryMode>0755</directoryMode>
                 <fileMode>0744</fileMode>
                 <directory>target</directory>
@@ -34,6 +34,6 @@
                 <includes>
                     <include>csw_eureka_server*.jar</include>
                 </includes>
-            </fileset>
-        <filesets>
+            </fileSet>
+        <fileSets>
 </assembly>

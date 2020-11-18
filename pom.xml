@@ -23,6 +23,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven-surefire-plugin>2.19.1</maven-surefire-plugin>
+		<start-class><com class="baml eops EurekaServer"></com></start-class>
 	</properties>
 
 	<dependencies>
@@ -122,7 +123,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.baml.ocst.EurekaServer</mainClass>
+					<mainClass>com.baml.eops.EurekaServer</mainClass>
 					<layout>ZIP</layout>
 				</configuration>
 			</plugin>

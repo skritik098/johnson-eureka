@@ -54,7 +54,7 @@ public class CustomIpAuthenticationProviderTest {
 
     @Test
     public void authenticate() throws Exception{
-        ReflectionTestUtils.setField(authProvider,"eurkaWhitelistIp","127.0.0.1");
+        ReflectionTestUtils.setField(authProvider,"eurekaWhitelistIp","127.0.0.1");
         List<String> whiteList = new ArrayList<>();
         whiteList.add("127.0.0.1");
         ReflectionTestUtils.setField(authProvider,"whiteList",whiteList);
@@ -73,9 +73,9 @@ public class CustomIpAuthenticationProviderTest {
 
     @Test(expected = BadCredentialsException.class)
     public void authenticate_exception() throws Exception{
-        ReflectionTestUtils.setField(authProvider, "eurekaiditelistip", ".*");
-        List<String> whitelist = Arrays.asList("/,/test".split(","));
-        ReflectionTestUtils.setField(authProvider, "whitelist", whitelist);
+        ReflectionTestUtils.setField(authProvider, "eurekaWhitelistIp", ".*");
+        List<String> whiteList = Arrays.asList("/,/test".split(","));
+        ReflectionTestUtils.setField(authProvider, "whiteList", whiteList);
 
         Authentication auth = PowerMockito.mock(Authentication.class);
         WebAuthenticationDetails details = PowerMockito.mock(WebAuthenticationDetails.class);

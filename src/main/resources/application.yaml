@@ -10,7 +10,7 @@ eureka:
         appname: csw_eureka_server
         registerWithEureka: false
         metadataMap:
-            instanceId: ${EUREKA_HOSTNAME:localhost}:${EUREKA_PORT:9761}
+            instanceId: ${EUREKA_HOSTNAME:localhost}:${EUREKA_PORT:8761}
     client:
         registerwithEureka: false
         fetchRegistry: false

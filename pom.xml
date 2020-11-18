@@ -182,7 +182,7 @@
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-					<execution>
+					<!-- <execution>
 						<id>jacoco-check</id>
 						<phase>test</phase>
 						<goals>
@@ -202,7 +202,7 @@
 								</rule>
 							</rules>
 						</configuration>
-					</execution>
+					</execution> -->
 					<execution>
 						<id>report</id>
 						<phase>prepare-package</phase>

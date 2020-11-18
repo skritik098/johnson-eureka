@@ -123,7 +123,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.baml.eops.EurekaServer</mainClass>
+					<mainClass>com.baml.eops.csw_eureka_server.EurekaServer</mainClass>
 					<layout>ZIP</layout>
 				</configuration>
 			</plugin>

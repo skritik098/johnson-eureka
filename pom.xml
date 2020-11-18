@@ -195,7 +195,7 @@
 									<limits>
 										<limit implementation="org.jacoco.report.check.Limit">
 											<counter>LINE</counter>
-											<value>CONVEREDRATIO</value>
+											<value>COVEREDRATIO</value>
 											<minimum>0.82</minimum>
 										</limit>
 									</limits>

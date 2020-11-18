@@ -72,7 +72,7 @@ public class CustomIpFilterTest {
             List<String> allowedUrlList = Arrays.asList("/,/test".split(","));
             ReflectionTestUtils.setField(customIpfilter,"allowedUrlList",allowedUrlList);
 
-            Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
+           // Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
             customIpfilter.doFilter(servletRequest,servletResponse,filterChain);
         } catch (Exception e) {
             Assert.fail("Should not have thrown exception");
@@ -89,7 +89,7 @@ public class CustomIpFilterTest {
             List<String> allowedUrlList = Arrays.asList("/,/test".split(","));
             ReflectionTestUtils.setField(customIpfilter,"allowedUrlList",allowedUrlList);
 
-            Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
+           // Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
             customIpfilter.doFilter(servletRequest,servletResponse,filterChain);
 
             Mockito.verify(servletRequest,Mockito.atLeast(1)).getRequestURI();
@@ -108,7 +108,7 @@ public class CustomIpFilterTest {
             List<String> allowedUrlList = Arrays.asList("/,/test".split(","));
             ReflectionTestUtils.setField(customIpfilter,"allowedUrlList",allowedUrlList);
 
-            Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
+           // Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
             customIpfilter.doFilter(servletRequest,servletResponse,filterChain);
 
             Mockito.verify(servletRequest,Mockito.atLeast(1)).getRequestURI();
@@ -126,7 +126,7 @@ public class CustomIpFilterTest {
             List<String> allowedUrlList = Arrays.asList("/,/test".split(","));
             ReflectionTestUtils.setField(customIpfilter,"allowedUrlList",allowedUrlList);
 
-            Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
+            //Mockito.when(servletRequest.getRequestURI()).thenReturn("/test"));
             Mockito.when(authenticationManager.authenticate(Matchers.any(Authentication.class))).thenThrow(new SessionAuthenticationException(""));
 
             customIpfilter.doFilter(servletRequest,servletResponse,filterChain);

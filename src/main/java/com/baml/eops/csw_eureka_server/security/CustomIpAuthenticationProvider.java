@@ -1,5 +1,4 @@
-// You dont have to make change this package line, keep it as it is as in yours
-package com.baml.eops.csw_eureka_server.security;
+package com.baml.ocst.eureka.security;
 
 import java.util.List;
 import java.util.regex.Pattern;

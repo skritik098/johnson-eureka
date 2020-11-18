@@ -31,7 +31,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails; 
 import org.springframework.web.filter.GenericFilterBean;
 
+// Add this next line 
+import org.springframework.context.annotation.PropertySource;
+@PropertySource("classpath:app.properties")
+
 @Configuration
+
 public class CustomIpFilter extends GenericFilterBean {
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomIpFilter.class);
     @Value("${csw.eureka.enable.ip.filter)") 

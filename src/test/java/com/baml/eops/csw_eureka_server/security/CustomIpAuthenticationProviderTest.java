@@ -1,4 +1,4 @@
-package com.baml.ocst.eureka.security;
+package com.baml.eops.csw_eureka_server.security;
 
 import java.util.Arrays;
 import java.util.ArrayList;

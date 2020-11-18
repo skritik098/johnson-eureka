@@ -92,7 +92,7 @@
 		<dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-module-junit4</artifactId>
-			<version>1.7.3</version>
+			<version>1.7.4</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -100,7 +100,7 @@
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-api-mockito</artifactId>
 			<!-- <artifactId>powermock-api-mockito2</artifactId> -->
-			<version>1.7.3</version>
+			<version>1.7.4</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

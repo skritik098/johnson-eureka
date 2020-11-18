@@ -35,5 +35,5 @@
                     <include>csw_eureka_server*.jar</include>
                 </includes>
             </fileSet>
-        <fileSets>
+        </fileSets>
 </assembly>

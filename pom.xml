@@ -172,7 +172,7 @@
 				</executions>
 			</plugin>
 
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.1</version>
@@ -183,7 +183,7 @@
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-					<!-- <execution>
+					 <execution>
 						<id>jacoco-check</id>
 						<phase>test</phase>
 						<goals>
@@ -203,7 +203,7 @@
 								</rule>
 							</rules>
 						</configuration>
-					</execution> -->
+					</execution> 
 					<execution>
 						<id>report</id>
 						<phase>prepare-package</phase>
@@ -228,7 +228,8 @@
 						<jacoco-agent.dataFile>target/jacoco.exec</jacoco-agent.dataFile>
 					</systemPropertyVariables>
 				</configuration>
-			</plugin>
+			</plugin> -->
+			
 		</plugins>
 		<!-- <resources>
 			<resource>

@@ -17,9 +17,15 @@ eureka:
     client:
         registerwithEureka: false
         fetchRegistry: false
+<<<<<<< HEAD
     #server:
      #   peer-node-connect-timeout-as: ${eureka.peer.cannection.timeout.ns:3000}
      #   peer-node-read-timeout-ns: ${eureka.peer.read.timeout.ms:3000}
+=======
+    server:
+        peer-node-connect-timeout-as: ${eureka.peer.cannection.timeout.ns:3000}
+        peer-node-read-timeout-ns: ${eureka.peer.read.timeout.ms:3000}
+>>>>>>> a396791f58d68707bdea9e18b135b8c9cd9f0fcd
 
 management:
     endpoints:

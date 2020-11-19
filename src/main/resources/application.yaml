@@ -14,8 +14,6 @@ eureka:
     client:
         registerwithEureka: false
         fetchRegistry: false
-        serviceurl:
-            defaultzone: ${EOPS_EUREKA_CLUSTER:http://ah-100158-001.sdi.corp.bankofanerica.com:8761/eureka}
     server:
         peer-node-connect-timeout-as: ${eureka.peer.cannection.timeout.ns:3000}
         peer-node-read-timeout-ns: ${eureka.peer.read.timeout.ms:3000}

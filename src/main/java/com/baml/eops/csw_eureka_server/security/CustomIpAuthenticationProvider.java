@@ -19,7 +19,7 @@ import org. springframework.stereotype.Component;
 @Component
 public class CustomIpAuthenticationProvider implements AuthenticationProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomIpAuthenticationProvider.class);
-    @Value("${csw.eureka.ipwhitelist)")
+    //@Value("${csw.eureka.ipwhitelist}")
     private String eurekaWhitelistIp;
     List<String> whiteList;
 

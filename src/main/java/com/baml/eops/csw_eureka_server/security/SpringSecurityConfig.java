@@ -1,4 +1,4 @@
-package com.baml.ocst.eureka.security;
+package com.baml.eops.csw_eureka_server.security;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -20,7 +20,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringSecurityConfig.class);
-    @Value("${csw.eureka.enable.ip.filter}")
+   //@Value("${csw.eureka.enable.ip.filter}")
     private String enableIpFilter;
     @Autowired
     private CustomIpAuthenticationProvider ipAuthenticationProvider;

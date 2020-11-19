@@ -34,9 +34,9 @@ import org.springframework.web.filter.GenericFilterBean;
 @Configuration
 public class CustomIpFilter extends GenericFilterBean {
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomIpFilter.class);
-    @Value("${csw.eureka.enable.ip.filter)") 
+   // @Value("${csw.eureka.enable.ip.filter}") 
     private String enableIpFilter;
-    @Value("${csw.eureka.allowed.url}")
+   // @Value("${csw.eureka.allowed.url}")
     private String eurekaAllowedUrl;
     
     @Autowired

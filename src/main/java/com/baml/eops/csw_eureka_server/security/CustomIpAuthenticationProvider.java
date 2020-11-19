@@ -1,10 +1,12 @@
-package com.baml.ocst.eureka.security;
+package com.baml.eops.csw_eureka_server.security;
 
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import javax.annotation.PostConstruct;
+
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +26,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:app.properties")
 public class CustomIpAuthenticationProvider implements AuthenticationProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomIpAuthenticationProvider.class);
-    //@Value("${csw.eureka.ipwhitelist}")
+    @Value("${csw.eureka.ipwhitelist}")
     private String eurekaWhitelistIp;
     List<String> whiteList;
 

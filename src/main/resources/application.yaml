@@ -1,22 +1,25 @@
 server:
-    port: ${EUREKA PORT:8761}
+    #port: ${EUREKA_PORT:8761}
+    port: 8761
 
 eureka:
-    environment: ${SERVICE_ENV_VAR}
+    environment: DEV
     instance:
-        port: ${EUREKA_PORT:8761}
-        preferIpAddress: false
-        hostname: ${EUREKA_HOSTNAME:localhost}
+        #port: ${EUREKA_PORT:8761}
+        port: 8761
+        #preferIpAddress: false
+        #hostname: ${EUREKA_HOSTNAME:localhost}
+        hostname: localhost
         appname: csw_eureka_server
         registerWithEureka: false
-        metadataMap:
-            instanceId: ${EUREKA_HOSTNAME:localhost}:${EUREKA_PORT:8761}
+        #metadataMap:
+        #    instanceId: ${EUREKA_HOSTNAME:localhost}:${EUREKA_PORT:8761}
     client:
         registerwithEureka: false
         fetchRegistry: false
-    server:
-        peer-node-connect-timeout-as: ${eureka.peer.cannection.timeout.ns:3000}
-        peer-node-read-timeout-ns: ${eureka.peer.read.timeout.ms:3000}
+    #server:
+     #   peer-node-connect-timeout-as: ${eureka.peer.cannection.timeout.ns:3000}
+     #   peer-node-read-timeout-ns: ${eureka.peer.read.timeout.ms:3000}
 
 management:
     endpoints:

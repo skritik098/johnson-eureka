@@ -24,7 +24,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.web.authentication.WebAuthenticationDetails; 
 import org.springframework.test.util.ReflectionTestUtils;
 //import CustomIpAuthenticationProvider;
-import com.baml.ocst.eureka.security.CustomIpAuthenticationProvider;
+import com.baml.eops.csw_eureka_server.security.CustomIpAuthenticationProvider;
 
 @RunWith(PowerMockRunner.class)
 

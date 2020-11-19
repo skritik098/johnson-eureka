@@ -1,4 +1,4 @@
-package com.baml.ocst.eureka.security;
+package com.baml.eops.csw_eureka_server.security;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +11,6 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest; 
 import javax.servlet.ServletResponse;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -24,7 +23,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException; 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -39,9 +37,9 @@ import org.springframework.context.annotation.PropertySource;
 
 public class CustomIpFilter extends GenericFilterBean {
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomIpFilter.class);
-   // @Value("${csw.eureka.enable.ip.filter}") 
+    @Value("${csw.eureka.enable.ip.filter}") 
     private String enableIpFilter;
-   // @Value("${csw.eureka.allowed.url}")
+    @Value("${csw.eureka.allowed.url}")
     private String eurekaAllowedUrl;
     
     @Autowired
@@ -51,18 +49,23 @@ public class CustomIpFilter extends GenericFilterBean {
 
     @PostConstruct
     public void postconstruct () {
-        allowedUrlList = Stream.of(eurekaAllowedUrl).filter(StringUtils::isNotBlank).flatMap(Pattern.compile(",")::splitAsStream).collect(Collectors.toList());
+        allowedUrlList = Stream.of(eurekaAllowedUrl)
+                        .filter(StringUtils::isNotBlank)
+                        .flatMap(Pattern.compile(",")::splitAsStream)
+                        .collect(Collectors.toList());
+
         if(!StringUtils.equalsIgnoreCase("Y", enableIpFilter)) {
              LOGGER.info("IP filter is disabled");
         }
     }
 
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) 
+            throws IOException, ServletException {
         LOGGER.debug("csw.eureka.enable.ip.filter: {}",enableIpFilter);
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-
+        
         if(StringUtils.equalsIgnoreCase("Y", enableIpFilter)) { 
             LOGGER.debug("Logging Request {}, {}, {}",
                 request.getRemoteAddr(), request.getMethod(), request.getRequestURI());
@@ -78,7 +81,7 @@ public class CustomIpFilter extends GenericFilterBean {
 
             if(!urlExcluded) {
                 try {
-                    LOGGER.debug("1P filter starting for {}, {} {}",
+                    LOGGER.debug("IP filter starting for {}, {} {}",
                         request.getRemoteAddr(), request.getMethod(), request.getRequestURI());
                 }
                 catch (BadCredentialsException e) {

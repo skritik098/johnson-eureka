@@ -1,4 +1,5 @@
 package com.baml.ocst.eureka.security;
+
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -16,7 +17,11 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org. springframework.stereotype.Component;
 
+// Add this next line
+import org.springframework.context.annotation.PropertySource;
+
 @Component
+@PropertySource("classpath:app.properties")
 public class CustomIpAuthenticationProvider implements AuthenticationProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomIpAuthenticationProvider.class);
     //@Value("${csw.eureka.ipwhitelist}")

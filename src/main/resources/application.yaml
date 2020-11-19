@@ -20,7 +20,7 @@ management:
             exposure:
                 Include: "*"
 
-logging.file: $(LOGS_DIR}/cs_eureka_server.log
+logging.file: src/main/resources/cs_eureka_server.log
 logging.file.max-history: 10
 
 spring:

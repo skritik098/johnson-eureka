@@ -18,8 +18,8 @@ public class EurekaServer {
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaServer.class, args);
 	}
-	// @Bean
-	// ScopeDecorator log4jScopeDecorator(){
-	// 	return ThreadContextScopeDecorator.create();
-	// }
+	 @Bean
+	 ScopeDecorator log4jScopeDecorator(){
+	 	return ThreadContextScopeDecorator.create();
+	 }
 }

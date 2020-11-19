@@ -53,7 +53,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
-    // @Override
+   // @Override
     public AuthenticationManager AuthenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }

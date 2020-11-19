@@ -17,7 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 // Add this next line only
-import org.spring.framework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:app.properties")
 
 @Configuration

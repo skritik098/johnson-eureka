@@ -52,3 +52,132 @@
 2020-11-20 01:52:40.761  WARN [csw_eureka_server,,,] 6695 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@774ca3b8}] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eurekaRibbonClientConfiguration': Unsatisfied dependency expressed through field 'eurekaConfig'; nested exception is org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
 2020-11-20 01:52:40.767  INFO [csw_eureka_server,,,] 6695 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
 2020-11-20 01:52:40.768  INFO [csw_eureka_server,,,] 6695 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-11-20 01:57:03.083  INFO [csw_eureka_server,,,] 7110 --- [main] c.b.eops.csw_eureka_server.EurekaServer  : No active profile set, falling back to default profiles: default
+2020-11-20 01:57:09.488  WARN [csw_eureka_server,,,] 7110 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-20 01:57:11.430  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2beb8d16-c38c-39cd-863c-658f09da075b
+2020-11-20 01:57:12.605  INFO [csw_eureka_server,,,] 7110 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8c8289b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-20 01:57:13.892  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2020-11-20 01:57:14.561  INFO [csw_eureka_server,,,] 7110 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-20 01:57:14.562  INFO [csw_eureka_server,,,] 7110 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-11-20 01:57:14.893  INFO [csw_eureka_server,,,] 7110 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-20 01:57:14.894  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11682 ms
+2020-11-20 01:57:15.436  WARN [csw_eureka_server,,,] 7110 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-20 01:57:15.437  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-20 01:57:15.512  INFO [csw_eureka_server,,,] 7110 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7f574eaa
+2020-11-20 01:57:20.161  INFO [csw_eureka_server,,,] 7110 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2020-11-20 01:57:20.392  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-11-20 01:57:20.415  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-11-20 01:57:21.082  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-11-20 01:57:21.082  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-11-20 01:57:22.113  WARN [csw_eureka_server,,,] 7110 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-20 01:57:22.114  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-20 01:57:23.415  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 01:57:25.084  INFO [csw_eureka_server,,,] 7110 --- [main] c.b.e.c.security.SpringSecurityConfig    : csw.eureka.enable.ip.filter: Y
+2020-11-20 01:57:25.860  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@373bdc4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@25c56a44, org.springframework.security.web.header.HeaderWriterFilter@4f2907e, org.springframework.security.web.authentication.logout.LogoutFilter@7d70ee06, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4fbdc4fa, com.baml.eops.csw_eureka_server.security.CustomIpFilter$$EnhancerBySpringCGLIB$$a314606@3cdaf3af, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41d4eca1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f8fa526, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7013785a, org.springframework.security.web.session.SessionManagementFilter@295915f2, org.springframework.security.web.access.ExceptionTranslationFilter@44a84fe4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@227f6666]
+2020-11-20 01:57:26.268  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-11-20 01:57:26.862  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-11-20 01:57:27.068  INFO [csw_eureka_server,,,] 7110 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-11-20 01:57:27.069  INFO [csw_eureka_server,,,] 7110 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2020-11-20 01:57:27.174  INFO [csw_eureka_server,,,] 7110 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1605817647172 with initial instances count: 0
+2020-11-20 01:57:27.854  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2020-11-20 01:57:27.856  WARN [csw_eureka_server,,,] 7110 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-11-20 01:57:27.943  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2020-11-20 01:57:27.982  INFO [csw_eureka_server,,,] 7110 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2020-11-20 01:57:28.373  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application csw_eureka_server with eureka with status UP
+2020-11-20 01:57:28.418  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2020-11-20 01:57:28.435  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+2020-11-20 01:57:28.719  INFO [csw_eureka_server,,,] 7110 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2020-11-20 01:57:28.753  INFO [csw_eureka_server,,,] 7110 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2020-11-20 01:57:28.755  INFO [csw_eureka_server,,,] 7110 --- [main] c.b.eops.csw_eureka_server.EurekaServer  : Started EurekaServer in 33.358 seconds (JVM running for 54.76)
+2020-11-20 01:57:28.794  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2020-11-20 01:57:28.795  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2020-11-20 01:57:28.795  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2020-11-20 01:57:28.795  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2020-11-20 01:57:28.796  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2020-11-20 01:57:28.836  INFO [csw_eureka_server,,,] 7110 --- [Thread-11] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2020-11-20 01:57:33.631  INFO [csw_eureka_server,,,] 7110 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-20 01:57:33.631  INFO [csw_eureka_server,,,] 7110 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 01:57:33.708  INFO [csw_eureka_server,,,] 7110 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 77 ms
+2020-11-20 01:58:28.803  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 01:59:28.803  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:00:28.803  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:01:28.804  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:02:28.805  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2020-11-20 02:03:28.806  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2020-11-20 02:04:28.806  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:05:28.807  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:06:28.807  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:07:27.858  WARN [csw_eureka_server,,,] 7110 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-11-20 02:07:28.808  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:08:28.809  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2020-11-20 02:09:28.809  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:10:28.810  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:11:28.819  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2020-11-20 02:12:27.944  INFO [csw_eureka_server,,,] 7110 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 1
+2020-11-20 02:12:28.819  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:13:28.820  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:14:28.819  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:15:28.819  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:16:28.819  INFO [csw_eureka_server,,,] 7110 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 02:17:12.868  INFO [csw_eureka_server,,,] 7110 --- [Thread-13] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application csw_eureka_server with eureka with status DOWN
+2020-11-20 02:17:12.876  INFO [csw_eureka_server,,,] 7110 --- [Thread-13] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2020-11-20 02:17:12.897  INFO [csw_eureka_server,,,] 7110 --- [Thread-13] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2020-11-20 02:17:12.900  INFO [csw_eureka_server,,,] 7110 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 02:17:13.942  INFO [csw_eureka_server,,,] 7110 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-11-20 02:17:13.942  INFO [csw_eureka_server,,,] 7110 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-11-20 14:20:46.619  INFO [csw_eureka_server,,,] 3201 --- [main] c.b.eops.csw_eureka_server.EurekaServer  : No active profile set, falling back to default profiles: default
+2020-11-20 14:20:51.140  WARN [csw_eureka_server,,,] 3201 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-20 14:20:52.548  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2beb8d16-c38c-39cd-863c-658f09da075b
+2020-11-20 14:20:53.898  INFO [csw_eureka_server,,,] 3201 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ca8e933c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-20 14:20:57.222  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2020-11-20 14:20:59.592  INFO [csw_eureka_server,,,] 3201 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-20 14:20:59.593  INFO [csw_eureka_server,,,] 3201 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-11-20 14:21:00.143  INFO [csw_eureka_server,,,] 3201 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-20 14:21:00.144  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13410 ms
+2020-11-20 14:21:01.202  WARN [csw_eureka_server,,,] 3201 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-20 14:21:01.202  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-20 14:21:01.303  INFO [csw_eureka_server,,,] 3201 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1b765a2c
+2020-11-20 14:21:06.338  INFO [csw_eureka_server,,,] 3201 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2020-11-20 14:21:06.633  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-11-20 14:21:06.646  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-11-20 14:21:07.465  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-11-20 14:21:07.466  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-11-20 14:21:09.813  WARN [csw_eureka_server,,,] 3201 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-20 14:21:09.813  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-20 14:21:11.352  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:21:13.949  INFO [csw_eureka_server,,,] 3201 --- [main] c.b.e.c.security.SpringSecurityConfig    : csw.eureka.enable.ip.filter: Y
+2020-11-20 14:21:14.486  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@312afbc7, org.springframework.security.web.context.SecurityContextPersistenceFilter@375b5b7f, org.springframework.security.web.header.HeaderWriterFilter@67207d8a, org.springframework.security.web.authentication.logout.LogoutFilter@7c2327fa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58065f0c, com.baml.eops.csw_eureka_server.security.CustomIpFilter$$EnhancerBySpringCGLIB$$1bf7b0a7@2692b61e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69b2f8e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@644abb8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@599f571f, org.springframework.security.web.session.SessionManagementFilter@7c2a69b4, org.springframework.security.web.access.ExceptionTranslationFilter@516ebdf8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fe01803]
+2020-11-20 14:21:15.093  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-11-20 14:21:16.568  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-11-20 14:21:17.803  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-11-20 14:21:17.861  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-11-20 14:21:18.144  INFO [csw_eureka_server,,,] 3201 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-11-20 14:21:18.147  INFO [csw_eureka_server,,,] 3201 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2020-11-20 14:21:18.223  INFO [csw_eureka_server,,,] 3201 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1605862278221 with initial instances count: 0
+2020-11-20 14:21:19.224  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2020-11-20 14:21:19.255  WARN [csw_eureka_server,,,] 3201 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-11-20 14:21:19.368  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2020-11-20 14:21:19.370  INFO [csw_eureka_server,,,] 3201 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2020-11-20 14:21:19.865  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application csw_eureka_server with eureka with status UP
+2020-11-20 14:21:19.916  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2020-11-20 14:21:19.934  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+2020-11-20 14:21:20.248  INFO [csw_eureka_server,,,] 3201 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2020-11-20 14:21:20.584  INFO [csw_eureka_server,,,] 3201 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2020-11-20 14:21:20.587  INFO [csw_eureka_server,,,] 3201 --- [main] c.b.eops.csw_eureka_server.EurekaServer  : Started EurekaServer in 38.409 seconds (JVM running for 39.931)
+2020-11-20 14:21:20.682  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2020-11-20 14:21:20.683  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2020-11-20 14:21:20.684  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2020-11-20 14:21:20.684  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2020-11-20 14:21:20.684  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2020-11-20 14:21:20.712  INFO [csw_eureka_server,,,] 3201 --- [Thread-10] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2020-11-20 14:22:05.602  INFO [csw_eureka_server,,,] 3201 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-20 14:22:05.602  INFO [csw_eureka_server,,,] 3201 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 14:22:05.745  INFO [csw_eureka_server,,,] 3201 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 143 ms
+2020-11-20 14:22:20.693  INFO [csw_eureka_server,,,] 3201 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-11-20 14:22:46.246  INFO [csw_eureka_server,,,] 3201 --- [Thread-12] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application csw_eureka_server with eureka with status DOWN
+2020-11-20 14:22:46.251  INFO [csw_eureka_server,,,] 3201 --- [Thread-12] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2020-11-20 14:22:46.291  INFO [csw_eureka_server,,,] 3201 --- [Thread-12] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2020-11-20 14:22:46.296  INFO [csw_eureka_server,,,] 3201 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:22:47.104  WARN [csw_eureka_server,,,] 3201 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6b7906b3}] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eurekaRibbonClientConfiguration': Unsatisfied dependency expressed through field 'eurekaConfig'; nested exception is org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2020-11-20 14:22:47.117  INFO [csw_eureka_server,,,] 3201 --- [Thread-12] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-11-20 14:22:47.117  INFO [csw_eureka_server,,,] 3201 --- [Thread-12] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

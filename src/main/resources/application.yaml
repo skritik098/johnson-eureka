@@ -1,11 +1,11 @@
 server:
-        port: ${EUREKA_PORT:8761}
+        port: 8761
 
 eureka:
     environment: DEV
     instance:
-        port: ${EUREKA_PORT:8761}
-        hostname: ${EUREKA_HOSTNAME:localhost}
+        port: 8761
+        hostname: localhost
         appname: csw_eureka_server
         registerWithEureka: false
     client:
@@ -20,8 +20,7 @@ management:
             exposure:
                 Include: "*"
 
-#logging.file: src/main/resources/cs_eureka_server.log
-logging.file: ${LOG_DIR}/cs_eureka_server.log
+logging.file: src/main/resources/cs_eureka_server.log
 logging.file.max-history: 10
 
 spring:

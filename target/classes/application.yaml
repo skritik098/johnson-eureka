@@ -1,0 +1,42 @@
+server:
+    port: 8761
+
+eureka:
+    environment: DEV
+    instance:
+        port: 8761
+        hostname: localhost
+        appname: csw_eureka_server
+        registerWithEureka: false
+    client:
+        registerwithEureka: false
+        fetchRegistry: false
+    server:
+        peer-node-connect-timeout-as: ${eureka.peer.cannection.timeout.ns:3000}
+        peer-node-read-timeout-ns: ${eureka.peer.read.timeout.ms:3000}
+management:
+    endpoints:
+        Web:
+            exposure:
+                Include: "*"
+
+logging.file: src/main/resources/cs_eureka_server.log
+logging.file.max-history: 10
+
+spring:
+    application:
+        name: csw_eureka_server
+    zipkin:
+        locator:
+            discovery:
+                enabled: false
+    sleuth:
+        smapler:
+            probability: 1.0
+    cloud: 
+        discovery:
+            client:
+                health-indicator:
+                    enabled: false
+                composite-indicator:
+                    enabled: false

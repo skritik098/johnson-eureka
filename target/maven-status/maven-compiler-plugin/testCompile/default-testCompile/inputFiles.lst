@@ -1,0 +1,3 @@
+/root/eurkea/johnson-eureka/src/test/java/com/baml/eops/csw_eureka_server/security/CustomIpFilterTest.java
+/root/eurkea/johnson-eureka/src/test/java/com/baml/eops/csw_eureka_server/EurekaServerTest.java
+/root/eurkea/johnson-eureka/src/test/java/com/baml/eops/csw_eureka_server/security/CustomIpAuthenticationProviderTest.java

@@ -1,0 +1,4 @@
+com/baml/eops/csw_eureka_server/security/CustomIpAuthenticationProvider.class
+com/baml/eops/csw_eureka_server/security/CustomIpFilter.class
+com/baml/eops/csw_eureka_server/security/SpringSecurityConfig.class
+com/baml/eops/csw_eureka_server/EurekaServer.class

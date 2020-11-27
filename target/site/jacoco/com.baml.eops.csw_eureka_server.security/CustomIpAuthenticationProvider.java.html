@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomIpAuthenticationProvider.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">csw_eureka_server</a> &gt; <a href="index.source.html" class="el_package">com.baml.eops.csw_eureka_server.security</a> &gt; <span class="el_source">CustomIpAuthenticationProvider.java</span></div><h1>CustomIpAuthenticationProvider.java</h1><pre class="source lang-java linenums">package com.baml.eops.csw_eureka_server.security;
+
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.annotation.PostConstruct;
+
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
+import org. springframework.stereotype.Component;
+
+// Add this next line
+import org.springframework.context.annotation.PropertySource;
+
+@Component
+@PropertySource(&quot;classpath:app.properties&quot;)
+<span class="fc" id="L27">public class CustomIpAuthenticationProvider implements AuthenticationProvider {</span>
+<span class="fc" id="L28">    private static final Logger LOGGER = LoggerFactory.getLogger(CustomIpAuthenticationProvider.class);</span>
+    @Value(&quot;${csw.eureka.ipwhitelist}&quot;)
+    private String eurekaWhitelistIp;
+    List&lt;String&gt; whiteList;
+
+    @PostConstruct
+    public void postConstruct(){
+<span class="nc" id="L35">        whiteList = Stream.of(eurekaWhitelistIp)</span>
+<span class="nc" id="L36">                    .filter(StringUtils::isNotBlank)</span>
+<span class="nc" id="L37">                    .flatMap(Pattern.compile(&quot;,&quot;)::splitAsStream)</span>
+<span class="nc" id="L38">                    .collect(Collectors.toList());</span>
+<span class="nc" id="L39">    }</span>
+
+    @Override
+    public Authentication authenticate(Authentication auth) throws AuthenticationException {
+<span class="fc" id="L43">        WebAuthenticationDetails details = (WebAuthenticationDetails) auth.getDetails();</span>
+<span class="fc" id="L44">        String userIp = details.getRemoteAddress();</span>
+<span class="fc" id="L45">        LOGGER.debug(&quot;Recieved requests from: &quot;+userIp);</span>
+
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if(!whiteList.contains(userIp)){</span>
+<span class="fc" id="L48">            LOGGER.debug(&quot;Request denied: {}&quot;, userIp);</span>
+<span class="fc" id="L49">            throw new BadCredentialsException(&quot;Un-authorized IP Address:&quot;+userIp);</span>
+        }
+
+<span class="fc" id="L52">        return new UsernamePasswordAuthenticationToken(null,null, null);</span>
+    }
+
+    @Override
+    public boolean supports(Class&lt;?&gt; authentication) {
+<span class="fc" id="L57">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>
